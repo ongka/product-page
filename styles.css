@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0 5%;
+}
+
+nav{
+    line-height: 80px;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo span{
+    font-size: 18px;
+    margin-left: 9px;
+    color: #494964;
+}
+
+.navlinks ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navlinks ul li{
+    margin: 0 40px;
+}
+
+.navlinks ul li a{
+    font-size: 18px;
+    color: #494964;
+    text-decoration: none;
+}
+
+@media (max-width:750px) {
+    .navlinks ul{
+        position: fixed;
+        top: 0;
+        left: -1000px;
+        flex-direction: column;
+        background-color: #c38cbb;
+        height: 100vh;
+        line-height: 15vh;
+        z-index: 999;
+        transition: 0.5s;
+    }
+    .navlinks ul li a{
+        color: #fff;
+    }
+    #menutoggle{
+        position: absolute;
+        right: 0;
+        transform: translate(-30px, 26px);
+    }
+    #menutoggle .bar{
+        width: 28px;
+        height: 5px;
+        background-color: #494964;
+        display: block;
+        margin-bottom: 5px;
+    }
+    #links-inner.active{
+        left: 0;
+    }
+}
+
+.hero{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero .caption{
+    width: 100%;
+    text-align: left;
+    animation: caption-anim 2s ease;
+}
+
+@keyframes caption-anim {
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.caption .head{
+    margin-bottom: 70px;
+}
+
+.caption .head h1{
+    font-size: 46px;
+    font-weight: 500;
+    color: #494964;
+}
+
+.caption .head p{
+    font-size: 20px;
+    color: #494964;
+}
+
+.svg{
+    text-align: center;
+}
+
+.svg img{
+    width: 80%;
+    filter: drop-shadow(0 5px 5px black);
+    animation: svg-drop 1.5s ease;
+}
+
+@keyframes svg-drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.cta a{
+    border: 2px solid #c38cbb;
+    background-color: #c38cbb;
+    padding: 15px 35px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta a:hover{
+    background: none;
+    color: #c38cbb;
+}
+
+.background-dot{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+@media (max-width:770px) {
+    .hero{
+        flex-direction: column;
+        margin-top: 5vh;
+    }
+    .hero .caption{
+        margin-bottom: 7vh;
+        text-align: center;
+    }
+    .hero .caption h1{
+        font-size: 30px;
+    }
+}
