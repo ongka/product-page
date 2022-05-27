@@ -2,4 +2,4 @@
 
 [https://ongka.github.io/product-page/](https://ongka.github.io/product-page/)
 
-Responsive product website for MacBook Pro
+Product website for MacBook Pro
